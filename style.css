@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+body {    background-image: url(billeder/mountain-landscape-clouds-2018.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+/*** HEADER ***/ 
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-btn {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  margin-bottom: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #333;
+  transition: background-color 0.3s;
+}
+
+.navlist li a:hover {
+  color: #d4d4d4;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.navlogo {
+  width: 150px; /* Specifik bredde for logoet, kan justeres efter behov */
+margin-top: 10px;  
+}
+
+
+.navlist {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navlist li {
+  margin-right: 20px;
+  color: white;
+}
+
+.navlist li a {
+  display: block;
+  line-height: 75px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/*** Vend R'et om, og gør det rødt ***/
+
+.vendom-rod {
+    display: inline-block;
+    color: red;
+    transform: scaleX(-1);
+}
+
+/*** Kategori ***/
+
+.grid_1-1-1 {
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+display: grid;
+
+  margin-top: 45px;}
+
+.btn {
+margin: 15px;
+padding: 10px;
+font-size: 16px;
+cursor: pointer;
+background-color: #f0f0f0;
+border: 2px solid #4591cb;
+border-radius: 5px;
+text-transform: uppercase;
+transition: background-color 0.3s, color 0.3s;
+text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #ddd8d8;
+    color: #fff;
+}
+
+/*** Produktliste ***/
+
+.grid_produktliste {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 2rem; 
+}
+
+.grid_produktliste article {
+  margin-top: 10px;
+
+    padding: 1rem; 
+    text-align: center; 
+}
+
+.grid_produktliste img {
+    width: 50%; 
+    height: auto; 
+}
+
+.grid_produktliste img:hover {
+   transition: transform 0.3s ease-in-out; 
+    transform: scale(1.1); 
+}
+
+.kategorifarve {
+color: grey;
+  }
+
+  .pris {
+font-weight: bold;
+  position: relative; /* Gør det muligt at placere pseudoelementet i forhold til pris-elementet */
+    display: inline-block; /* Sørger for, at stregen kun påvirker tekstens bredde */
+    padding-bottom: 0.2rem; /* Tilføj lidt plads nedenunder for stregen */
+}
+
+.pris::before {
+    content: ""; /* Pseudoelementet er et tomt indhold */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Startstørrelsen på stregen (ingen bredde) */
+    height: 2px; /* Tykkelsen af stregen */
+    background-color: #4591cb; /* Farven på stregen */
+    transition: width 0.2s ease-in-out; /* Animation: bredden ændres over 0,3 sekunder */
+}
+
+.pris:hover::before {
+    width: 100%; /* Når der hoves, strækker stregen sig til hele elementets bredde */
+}
+
+.readmore {
+  font-weight: bold;
+  font-size: 12px;
+color: #4d73b4;
+text-decoration: underline;
+}
+
+.streg1 {
+border: 1px solid;
+color: #4591cb;
+margin-top: 1rem;
+width: 70%;
+margin-top: 30px;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+/*** Produkt ***/
+ 
+.goback {
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.here {
+text-decoration:underline;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.produktbillede {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%; 
+}
+
+.product-menu {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    position: relative; /* For at positionere knappen korrekt */
+}
+
+.product-menu h2 {
+    margin-top: 0;
+}
+
+.product-description {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.add-to-basket {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4591cb; /* En flot blå farve */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase; /* Gør teksten store bogstaver */
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s; /* Glidende overgang for farve og transform */
+}
+
+.add-to-basket:hover {
+    background-color: #357ab7; /* Mørkere blå farve ved hover */
+    transform: scale(1.05); /* Let zoom-effekt ved hover */
+}
+
+.add-to-basket:active {
+    background-color: #2a5d8b; /* Endnu mørkere blå farve når knappen er trykket ned */
+    transform: scale(1); /* Tilbage til normal størrelse når knappen er trykket */
+}
+
+/*** Mobil side ***/
+@media (max-width: 750px) {
+
+.grid_produktliste {
+grid-template-columns: 1fr;
+display: grid;
+}
+}
