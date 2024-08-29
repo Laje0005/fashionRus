@@ -101,6 +101,11 @@ text-decoration: none;
 
 /*** Produktliste ***/
 
+#smallProductTemplate {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+}
+
 .grid_produktliste {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; 
